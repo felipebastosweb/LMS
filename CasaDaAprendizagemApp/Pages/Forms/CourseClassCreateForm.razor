@@ -1,0 +1,32 @@
+﻿@using CasaDaAprendizagemApp.Data.Models;
+@using CasaDaAprendizagemApp.Data.Repositories;
+
+<h3>Start Class</h3>
+
+<EditForm Model="courseClass">
+    <div class="mb-3 form-floating">
+        <InputSelect @bind-Value="courseClass.CourseId">
+            @foreach(var course in courseList)
+            {
+                <option value="@course.Id">@course.Title</option>
+            }
+        </InputSelect>
+    </div>
+    <div class="mb-3 form-floating">
+        <InputDate @bind-Value="courseClass.CreationDate" />
+    </div>
+    <div class="mb-3 form-floating">
+        <InputDate @bind-Value="courseClass.FinishDate" />
+    </div>
+</EditForm>
+
+@code
+{
+    public List<Course> courseList { get; set; } = new();
+    public CourseClass courseClass { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+}

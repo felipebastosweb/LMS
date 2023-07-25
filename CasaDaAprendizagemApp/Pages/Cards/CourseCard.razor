@@ -1,0 +1,21 @@
+﻿@using CasaDaAprendizagemApp.Data.Models;
+
+<div class="card">
+    <img src="..." class="card-img-top" alt="..." style="height: 200px; width: 100%" />
+    <div class="card-body">
+        <h5 class="card-title">@course.Title</h5>
+        <p class="card-text">@course.Description</p>
+        <a href="#" class="btn btn-primary">Go to</a>
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public Course course { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+}

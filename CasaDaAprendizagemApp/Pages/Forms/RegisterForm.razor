@@ -1,0 +1,64 @@
+﻿@using SportClubApp.Data.Models;
+@using SportClubApp.Data.Records;
+
+<section class="mb-0">
+    <header class="row">
+        <h5>Cadastrar-se</h5>
+    </header>
+    <EditForm Model="@userRegister" class="row">
+        <div class="form-floating mb-3">
+            <InputText @bind-Value="userRegister.Username"
+                       id="username" class="form-control" placeholder="Username" />
+            <label for="username">Username</label>
+        </div>
+        <div class="form-floating mb-3">
+            <InputText @bind-Value="userRegister.Password" type="password"
+                       id="password" class="form-control" placeholder="Password" />
+            <label for="password">Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <InputText @bind-Value="RepeatPassword" type="password"
+                       id="repeat-password" class="form-control" placeholder="Repeat Password" />
+            <label for="repeat-password">Repeat Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <InputText @bind-Value="userRegister.Email" type="email"
+                       id="email" class="form-control" placeholder="E-mail" />
+            <label for="email">E-mail</label>
+        </div>
+        <div class="form-floating mb-3">
+            <InputText @bind-Value="userRegister.Telephone" type="phone"
+                       id="telephone" class="form-control" placeholder="Telephone" />
+            <label for="telephone">Telephone</label>
+        </div>
+        <div class="form-check mb-3">
+            <InputCheckbox @bind-Value="userRegister.AcceptTerms"
+                           id="accept-terms" class="form-check-input" checked />
+            <label for="accept-terms" class="form-check-label">I accepter Use Terms and Privacy Policy.</label>
+        </div>
+        <div class="mb-3">
+            <button @onclick="OnCancelButtonClicked" class="btn btn-secondary">Cancel</button>
+            <button @onclick="OnConfirmButtonClicked" class="btn btn-success">Confirm</button>
+        </div>
+    </EditForm>
+</section>
+
+@code {
+    public UserRegister userRegister { get; set; } = new();
+    public string RepeatPassword { get; set; } = "";
+
+    protected override Task OnInitializedAsync()
+    {
+        return base.OnInitializedAsync();
+    }
+
+    public async Task OnCancelButtonClicked()
+    {
+        await Task.FromResult(true);
+    }
+
+    public async Task OnConfirmButtonClicked()
+    {
+        await Task.FromResult(true);
+    }
+}

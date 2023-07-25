@@ -1,0 +1,23 @@
+﻿@using CasaDaAprendizagemApp.Data.Models;
+@using CasaDaAprendizagemApp.Data.Repositories;
+@using CasaDaAprendizagemApp.Pages.Cards;
+
+<article class="container">
+    <section class="row">
+        @foreach(var course in courseList)
+        {
+            <CourseCard course="@course"></CourseCard>
+        }
+    </section>
+</article>
+
+
+@code {
+    public List<Course> courseList { get; set; } = new();
+    protected CourseRepository courseRepository = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+}
