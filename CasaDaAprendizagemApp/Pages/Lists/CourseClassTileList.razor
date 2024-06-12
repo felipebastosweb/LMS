@@ -1,0 +1,16 @@
+﻿@using CasaDaAprendizagemApp.Data.Models;
+
+@foreach(var courseClass in courseClassList)
+{
+    <p>@courseClass.StartDate.ToShortDateString()</p>
+    <p>@courseClass.FinishDate.ToShortDateString()</p>
+}
+
+@code {
+    public List<CourseClass> courseClassList { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+}

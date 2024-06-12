@@ -1,5 +1,4 @@
-﻿@using SportClubApp.Data.Models;
-@using SportClubApp.Data.Records;
+﻿@using CasaDaAprendizagemApp.Data.Models;
 
 <section class="mb-0">
     <header class="row">
@@ -44,7 +43,7 @@
 </section>
 
 @code {
-    public UserRegister userRegister { get; set; } = new();
+    public User userRegister { get; set; } = new();
     public string RepeatPassword { get; set; } = "";
 
     protected override Task OnInitializedAsync()

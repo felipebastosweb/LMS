@@ -32,6 +32,7 @@
 
     public async Task OnCancelButtonClicked()
     {
+        await App.Current.MainPage.DisplayAlert("", "Ok", "Cancel");
         await Task.FromResult(true);
     }
 

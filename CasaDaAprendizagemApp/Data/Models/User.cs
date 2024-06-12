@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CasaDaAprendizagemApp.Data.Models
 {
-    public class User
+    public class User : BaseModel
     {
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public string Telephone { get; set; }
+        public bool KeepConnected { get; set; }
+        public bool AcceptTerms { get; set; }
     }
 }

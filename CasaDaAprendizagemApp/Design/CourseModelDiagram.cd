@@ -37,12 +37,9 @@
   <Class Name="CasaDaAprendizagemApp.Data.Models.Enrollment">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAAAAAQAACA=</HashCode>
+      <HashCode>QAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAAAAAQCAAA=</HashCode>
       <FileName>Data\Models\Enrollment.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Studant" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="CasaDaAprendizagemApp.Data.Models.Lesson">
     <Position X="7" Y="5.75" Width="1.5" />
@@ -58,11 +55,11 @@
       <FileName>Data\Models\Person.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CasaDaAprendizagemApp.Data.Models.Studant">
+  <Class Name="CasaDaAprendizagemApp.Data.Models.Student">
     <Position X="0.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Data\Models\Studant.cs</FileName>
+      <FileName>Data\Models\Student.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CasaDaAprendizagemApp.Data.Models.Teacher">

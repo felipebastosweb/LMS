@@ -3,6 +3,14 @@
 @using CasaDaAprendizagemApp.Pages.Cards;
 
 <article class="container">
+    <header class="row">
+        <article class="col-6">
+            <h3>Lista de Cursos</h3>
+        </article>
+        <aside class="col-6">
+            <button class="btn btn-primary">Novo</button>
+        </aside>
+    </header>
     <section class="row">
         @foreach(var course in courseList)
         {

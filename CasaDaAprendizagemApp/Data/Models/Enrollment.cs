@@ -10,8 +10,8 @@ namespace CasaDaAprendizagemApp.Data.Models
     public class Enrollment
     {
         [Indexed]
-        public int StudantId { get; set; }
-        public virtual Studant Studant { get; set; }
+        public int StudentId { get; set; }
+        public virtual Studant Student { get; set; }
         [Indexed]
         public int CourseClassId { get; set; }
         public virtual CourseClass CourseClass { get; set; }

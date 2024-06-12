@@ -1,5 +1,4 @@
 ﻿@using CasaDaAprendizagemApp.Data.Models;
-@using CasaDaAprendizagemApp.Data.Records;
 
 
 <h3>Entrar</h3>
@@ -28,7 +27,7 @@
 
 @code
 {
-    public UserLogin userLogin { get; set; } = new();
+    public User userLogin { get; set; } = new();
 
     protected override Task OnInitializedAsync()
     {

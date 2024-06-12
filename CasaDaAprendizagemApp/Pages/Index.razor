@@ -1,16 +1,23 @@
 ﻿@page "/"
 
+@using CasaDaAprendizagemApp.Pages.Lists;
+@using CasaDaAprendizagemApp.Data.Models;
+
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<CourseCardList></CourseCardList>
+
 
 @code
 {
+    public List<Course> courseList { get; set; } = new();
 
-
-
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
 
     // dotnet add package sqlite-net-pcl --version 1.8.116
     // dotnet add package SQLitePCLRaw.bundle_green --version 2.1.5

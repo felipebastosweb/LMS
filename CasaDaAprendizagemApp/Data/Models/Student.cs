@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CasaDaAprendizagemApp.Data.Models
 {
-    public class Studant : Person
+    public class Student : Person
     {
         [Indexed]
         public int UserId { get; set; }
