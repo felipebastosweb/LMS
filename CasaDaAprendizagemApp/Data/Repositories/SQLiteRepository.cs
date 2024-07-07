@@ -31,7 +31,7 @@ namespace CasaDaAprendizagemApp.Data.Repositories
             Connection = new SQLiteAsyncConnection(DatabasePath, Flags);
             await Connection.CreateTableAsync<User>();
             await Connection.CreateTableAsync<Course>();
-            await Connection.CreateTableAsync<Studant>();
+            await Connection.CreateTableAsync<Student>();
             await Connection.CreateTableAsync<Enrollment>();
             await Connection.CreateTableAsync<Person>();
             await Connection.CreateTableAsync<Teacher>();
